@@ -101,7 +101,7 @@ def fetch_cargo_manifests():
                     ).isoformat(),
                     "total_weight_kg": total_weight_kg,
                     "total_volume_m3": total_volume_m3,
-                    "cargo_fill_pct": f"{random.uniform(35.0, 98.0):.1f}%",
+                    "cargo_fill_pct": round(random.uniform(35.0, 98.0), 1),
                     "cargo_value_usd": round(random.uniform(10000.0, 5_000_000.0), 2),
                     "priority_class": random.choice(priority_classes),
                     "created_at": now.isoformat(),
